@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    width: 80%;
+    margin: auto;
+    margin-top: 120px;
+}
+
+.box_canvas {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+canvas {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;  
+    height: auto;  
+}
+.output-image {
+    margin: 10px;
+}
+.form_input {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.form_input .input {
+    margin-bottom: 15px;
+}
+.form_input .button {
+    margin-top: 15px;
+}
+.custom_btn_download{
+    background-color: white;
+
+}
+
+.btn{
+    background-color: #E1AD37;
+    color: white;
+    border: none;
+}
+.btn:hover{
+    background-color: rgb(4, 4, 4);
+    color: #E1AD37;
+}
+canvas {
+    border: 1px solid black;
+}
+.output-image {
+    margin: 10px;
+}
+#printAllButton {
+    margin-top: 10px;
+}
+
+.progress {
+    width: 100%;
+    height: auto;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    line-height: 30px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.custom-btn button {
+    border-radius: 8%;
+    background-color: burlywood;
+    border-color: burlywood;
+    padding: 8px;
+    margin-right: 25px;
+}
+button:hover{
+    background-color: darkgoldenrod;
+}
+
+.custom_menu {
+    background-color: rgb(255, 241, 172);
+    position: fixed;
+    z-index: 100;
+    margin-top: 80px;
+}
+
+#menu button:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+/* Hình ảnh */
+.logo {
+    margin-right: auto;
+    margin-left: 20px;
+}
+/* Chung */
+
+.navbar-toggler {
+    font-size: 20px;
+}
+/* Đăng nhập */
+.login a, .register a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+
+.login {
+    margin-right: 2%;
+    font-size: 18px;
+}
+/* Đăng ký */
+.register {
+    margin-right: 2%;
+    font-size: 18px;
+}
+ 
+/* #menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: black;
+    transition: width 0.3s;
+    left: 0;
+    bottom: -5px;
+}
+
+#menu a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+ 
+#menu a:hover {
+    color: brown;
+} */
+
+/* Nút thông báo */
+
+.notification {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -100px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: translate(50%);
+    
+}
+
+.notification:hover .info {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.notification:hover .icon {
+    transform: scale(1.2); /* Tăng kích thước icon khi di chuyển chuột vào */
+}
+/* nút cài đặt */
+
+.setting{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.icon2 {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.note {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -100px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: translate(50%);
+    
+}
+
+.setting:hover .note {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.setting:hover .icon2 {
+    transform: scale(1.2); /* Tăng kích thước icon khi di chuyển chuột vào */
+}
+
+/* Thanh tìm kiếm */
+.custom_seard {
+    padding-left: 2.5rem; /* Để chừa khoảng trống cho biểu tượng */
+    font-size: 0.875rem; /* Kích thước chữ */
+    line-height: 1.5; /* Độ cao dòng */
+}
+
+.ion-search {
+    position: absolute; /* Vị trí tuyệt đối */
+    left: 0.75rem; /* Canh lề bên trái */
+    top: 50%; /* Canh lề theo chiều dọc */
+    transform: translateY(-50%); /* Dịch chuyển lên trên theo chiều dọc */
+    color: #495057; /* Màu sắc của biểu tượng */
+}
+.container1{
+    width: 25%;
+    margin-right: 10%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+/* nút tải xuống */
+
+.download{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.tv {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.message {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -100px; 
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: translate(50%);
+    
+}
+
+.download:hover .message {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.download:hover .tv {
+    transform: scale(1.2); /* Tăng kích thước icon khi di chuyển chuột vào */
+}
+
+/* Chức năng trong menu */
+.custom-button {
+    background-color: #f0f0f0; /* Màu nền cho input */
+    border: 1px solid #ccc; /* Viền xung quanh input */
+    border-radius: 5px; /* Bo góc của input */
+    padding: 8px; /* Đệm bên trong input */
+    font-size: 14px; /* Kích thước chữ trong input */
+    width: 200px; /* Độ rộng của input */
+}
+.custom-button {
+    background-color:peru;/* Màu nền của nút */
+    color: #fff; /* Màu chữ của nút */
+    border-color:white; /* Màu viền của nút */
+    border-radius: 5px; /* Bo góc của nút */
+    padding: 8px 16px; /* Đệm bên trong nút */
+    font-size: 14px; /* Kích thước chữ trong nút */
+}
+
+.custom-button:hover {
+    background-color:darkgoldenrod; /* Màu nền của nút khi di chuột vào */
+    border-color:white; /* Màu viền của nút khi di chuột vào */
+}
+ul li {
+    text-decoration: none;
+}
+
+#menu .nav>li :hover {
+    background-color: rgb(255, 190, 222);
+    border-radius: 3rem;
+}
+
+.them {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.nhan {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: translate(50%);
+}
+
+.them.active .nhan {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* .offcanvas-body .nav-item:nth-child(1) {
+    display: none;
+} */
+/* .offcanvas-body .nav-item:nth-child(6) {
+    display: none;
+} */
+
+.custom_menu{
+    border-radius: 10px;
+    
+    
+}
+.custom-navbar {
+    max-width: 300px; /* Độ rộng tối đa của navbar khi thu nhỏ */
+    transition: max-width 0.3s ease; /* Hiệu ứng thu nhỏ */
+  }
+  
+  .custom-navbar .container-fluid {
+    padding: 10px; /* Khoảng cách nội dung và viền của navbar */
+  }
+
+ 

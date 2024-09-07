@@ -1,0 +1,63 @@
+{
+  "resources/css/Admin.css": {
+    "file": "assets/Admin-CZFlLg9D.css",
+    "src": "resources/css/Admin.css",
+    "isEntry": true
+  },
+  "resources/css/Canvas.css": {
+    "file": "assets/Canvas-DDePQWAo.css",
+    "src": "resources/css/Canvas.css",
+    "isEntry": true
+  },
+  "resources/css/CanvasPro.css": {
+    "file": "assets/CanvasPro-kYojrci0.css",
+    "src": "resources/css/CanvasPro.css",
+    "isEntry": true
+  },
+  "resources/css/Home.css": {
+    "file": "assets/Home-BNKUoLI6.css",
+    "src": "resources/css/Home.css",
+    "isEntry": true
+  },
+  "resources/css/login.css": {
+    "file": "assets/login-CdJtrHOJ.css",
+    "src": "resources/css/login.css",
+    "isEntry": true
+  },
+  "resources/js/Admin/Admin.js": {
+    "file": "assets/Admin-CxK3wYH8.js",
+    "name": "Admin",
+    "src": "resources/js/Admin/Admin.js",
+    "isEntry": true
+  },
+  "resources/js/Admin/Setting.js": {
+    "file": "assets/Setting-6ABuZdUL.js",
+    "name": "Setting",
+    "src": "resources/js/Admin/Setting.js",
+    "isEntry": true
+  },
+  "resources/js/Canvas/Canvas1.js": {
+    "file": "assets/Canvas1-FUrKi0wF.js",
+    "name": "Canvas1",
+    "src": "resources/js/Canvas/Canvas1.js",
+    "isEntry": true
+  },
+  "resources/js/Canvas/Canvas2.js": {
+    "file": "assets/Canvas2-Hq4mAYeg.js",
+    "name": "Canvas2",
+    "src": "resources/js/Canvas/Canvas2.js",
+    "isEntry": true
+  },
+  "resources/js/Canvas/Canvas3.js": {
+    "file": "assets/Canvas3-C7bRysdK.js",
+    "name": "Canvas3",
+    "src": "resources/js/Canvas/Canvas3.js",
+    "isEntry": true
+  },
+  "resources/js/login/script.js": {
+    "file": "assets/script-l0sNRNKZ.js",
+    "name": "script",
+    "src": "resources/js/login/script.js",
+    "isEntry": true
+  }
+}
