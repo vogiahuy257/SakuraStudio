@@ -17,10 +17,9 @@ Route::get('/register', [RegisterController::class, 'show'])->name('register.sho
 Route::post('/register', [RegisterController::class, 'store'])->name('register.submit'); // Handle registration submission
 
 // Design Canvas Routes
-Route::get('/user/design/canvas3', [ImportController::class, 'showCanvas3'])->name('canvas3.show'); // Show Canvas 3 design
-Route::get('/user/design/canvas1', [ImportController::class, 'showCanvas1'])->name('canvas1.show'); // Show Canvas 1 design
-Route::get('/user/design/canvas2', [ImportController::class, 'showCanvas2'])->name('canvas2.show'); // Show Canvas 2 design
-Route::get('/user/design/canvas', [ImportController::class, 'showCanvas'])->name('canvas.show'); // Show main Canvas design
+
+Route::get('/user/design/canvasPro', [ImportController::class, 'showCanvasPro'])->name('canvaspro.show'); // Show main Canvas design
+Route::get('/user/design/canvas/{id}', [ImportController::class, 'showCanvas'])->name('canvas.show'); //Show Canvas form database
 
 // Admin Routes
 Route::get('/admin', [AdminController::class, 'show'])->name('admin.show'); // Show admin dashboard
@@ -51,4 +50,4 @@ Route::delete('/contact/delete/{id}', [ContactController::class, 'deleteFile'])-
 Route::get('/contact/details/{id}', [ContactController::class, 'showFileDetails'])->name('contact.details.show'); // Show contact details
 
 // Canvas Pro Route
-Route::post('/user/design/canvas/get-fields', [ImportController::class, 'getFields'])->name('canvas.getFields'); // Get fields for Canvas design
+Route::match(['get', 'post'], '/canvas/get-fields/{id}', [ImportController::class, 'getFields'])->name('canvas.getFields');

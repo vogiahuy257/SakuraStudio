@@ -26,7 +26,7 @@
             @if(session('login') == 'true')
                 <!-- Create Design -->
                 <div class="custom-btn">
-                    <a href="{{route('canvas.show')}}"><button id="createDesignText">Create Design</button></a> <!-- Updated route name -->
+                    <a href="{{route('canvaspro.show')}}"><button id="createDesignText">Create Design</button></a> <!-- Updated route name -->
                 </div>
                 
                 <style>

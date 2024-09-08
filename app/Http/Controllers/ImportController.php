@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\ExcelRepositoryInterface; // Import the ExcelRepository
 use Illuminate\Http\Request;
+use App\Models\Card;
 
 class ImportController extends Controller
 {
@@ -14,26 +15,8 @@ class ImportController extends Controller
         $this->excelRepository = $excelRepository;
     }
 
-    // Show Canvas 1 design
-    public function showCanvas1()
-    {
-        return view('Canvas.Canvas1');
-    }
-
-    // Show Canvas 2 design
-    public function showCanvas2()
-    {
-        return view('Canvas.Canvas2');
-    }
-
-    // Show Canvas 3 design
-    public function showCanvas3()
-    {
-        return view('Canvas.Canvas3');
-    }
-
     // Show main Canvas design
-    public function showCanvas()
+    public function showCanvasPro()
     {
         $fileValue = null; // Variable to hold selected file value
         $fields = null; // Variable to hold fields related to the selected file
@@ -43,8 +26,35 @@ class ImportController extends Controller
         return view('Canvas.CanvasPro', compact('files', 'fileValue', 'fields', 'fieldValuesArray'));
     }
 
+    // Show main Canvas form Database
+    public function showCanvas($id)
+    {
+        $card = Card::findOrFail($id);
+        $fileValue = null;
+        $fields = null; 
+        $fieldValuesArray = []; 
+        $userId = session('user_id'); 
+        $files = $this->excelRepository->getAllFiles($userId);
+
+
+        if($card)
+        {
+            return view('Canvas.Canvas', [
+                'card' => $card,
+                'files' => $files,
+                'fileValue' => $fileValue,
+                'fields' => $fields,
+                'fieldValuesArray' => $fieldValuesArray,
+            ]);
+        }
+        else
+        {
+            return response()->json(['error' => 'Card not found'], 404);
+        }
+    }
+
     // Handle retrieval of fields and field values based on file ID
-    public function getFields(Request $request)
+    public function getFields(Request $request,$id)
     {
         $fileId = $request->input('file_id'); // Get file ID from the request
         if (empty($fileId)) {
@@ -72,6 +82,15 @@ class ImportController extends Controller
             $fieldValuesArray[$fieldValue->field_id][] = $fieldValue->value; // Group values by field ID
         }
 
-        return view('Canvas.CanvasPro', compact('files', 'fileValue', 'fields', 'fieldValuesArray'));
+        if($id > 0)
+        {
+            $card = Card::findOrFail($id);
+             return view('Canvas.Canvas', compact('files', 'fileValue', 'fields', 'fieldValuesArray','card'));
+        }
+        else
+        {
+            return view('Canvas.CanvasPro', compact('files', 'fileValue', 'fields', 'fieldValuesArray'));
+        }
+        
     }
 }

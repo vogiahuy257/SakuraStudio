@@ -14,7 +14,7 @@
             <div class="letter">
                <!-- Check if user is logged in and show appropriate link -->
                @if(session('login') == 'true')
-                  <a href="{{route('canvas.show')}}"><p id="createDesignHere">Create design here</p></a> <!-- Updated route name -->
+                  <a href="{{route('canvaspro.show')}}"><p id="createDesignHere">Create design here</p></a> <!-- Updated route name -->
                @else
                   <a href="{{route('login.show')}}"><p id="createDesignHere">Create design here</p></a> <!-- Updated route name -->
                @endif

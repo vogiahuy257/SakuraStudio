@@ -62,7 +62,13 @@ const coordinates = [];  // Mảng lưu tọa độ các thẻ
 const printAllButton = document.getElementById('printAllButton');
 
 let currentFieldId = null;
-let bgImage = null;
+let bgImage = new Image();
+bgImage.src = "{{ asset($card->image_path) }}";
+
+bgImage.onload = function() {
+    mainCtx.drawImage(bgImage, 0, 0, mainCanvas.width, mainCanvas.height);  // Vẽ ảnh khi đã tải xong
+};
+
 
 // Text input elements
 const newTextInput = document.getElementById('newTextInput');
@@ -282,11 +288,8 @@ document.getElementById('bgImageInput').addEventListener('change', (event) => {
 });
 // button reset
 document.getElementById('resetAllButton').addEventListener('click', () => {
-
-        
         coordinates.length = 0;
         redrawCanvas();
-        
     });
 
 
@@ -355,6 +358,7 @@ document.getElementById('generateAllButton').addEventListener('click', () => {
         cardContainer.appendChild(canvasClone);
         // Thêm thẻ card vào trang
         document.body.appendChild(cardContainer);
+        
     }
 });
 
